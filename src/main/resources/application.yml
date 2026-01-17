@@ -5,7 +5,7 @@ spring:
     base-path: /api
 
 server:
-  port: 8080
+  port: 8081
   servlet:
     context-path: /
   compression:
@@ -34,7 +34,7 @@ upstox:
     base-url: https://api.upstox.com/
     client-id: ${UPSTOX_CLIENT_ID}
     client-secret: ${UPSTOX_CLIENT_SECRET}
-    redirect-uri: http://localhost:8080/callback
+    redirect-uri: http://localhost:8081/api/auth/callback
     connect-timeout: 5000
     read-timeout: 10000
   market-data:

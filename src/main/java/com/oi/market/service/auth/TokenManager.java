@@ -114,6 +114,33 @@ public class TokenManager {
     }
 
     /**
+     * Get token expiry time in milliseconds
+     */
+    public long getExpiryTime() {
+        lock.readLock().lock();
+        try {
+            if (!isValid || accessToken == null) {
+                return -1;
+            }
+            return calculateTokenExpiryTime(tokenIssuedAt);
+        } finally {
+            lock.readLock().unlock();
+        }
+    }
+
+    /**
+     * Get next refresh time in milliseconds
+     */
+    public long getNextRefreshTime() {
+        lock.readLock().lock();
+        try {
+            return nextRefreshTime;
+        } finally {
+            lock.readLock().unlock();
+        }
+    }
+
+    /**
      * Get milliseconds until next refresh is needed
      */
     public long getTimeUntilRefresh() {

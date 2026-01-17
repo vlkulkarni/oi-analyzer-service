@@ -1,6 +1,8 @@
 package com.oi.market.service.auth;
 
 import com.oi.market.exception.UpstoxAuthException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,7 @@ public class MarketDataAuthorizeService {
 
     private static final Logger logger = LoggerFactory.getLogger(MarketDataAuthorizeService.class);
     private static final String AUTHORIZE_ENDPOINT = "https://api.upstox.com/v3/feed/market-data-feed/authorize";
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
     private final WebClient webClient;
     private final TokenManager tokenManager;
@@ -52,40 +55,55 @@ public class MarketDataAuthorizeService {
 
     /**
      * Parse WebSocket URL from authorization response
-     * Expects JSON response with "data" object containing "authorizedRedirectUrl"
+     * Expects JSON response with "data" object containing WebSocket URL
      */
     private Mono<String> parseWebSocketUrl(String response) {
         try {
-            // Parse "authorizedRedirectUrl" from JSON response
-            // Expected format: {..., "data": {..., "authorizedRedirectUrl": "wss://..."}}
-
-            int dataStartIdx = response.indexOf("\"data\"");
-            if (dataStartIdx == -1) {
+            logger.info("Full authorization response: {}", response);
+            
+            JsonNode root = objectMapper.readTree(response);
+            JsonNode data = root.get("data");
+            
+            if (data == null) {
+                logger.error("No 'data' field in response. Root fields: {}", root.fieldNames());
+                // Try to get URL from root level
+                for (String fieldName : new String[]{"authorizedRedirectUrl", "redirectUrl", "wsUrl", "url"}) {
+                    JsonNode urlNode = root.get(fieldName);
+                    if (urlNode != null && !urlNode.isNull()) {
+                        String wsUrl = urlNode.asText();
+                        logger.info("Found WebSocket URL at root level in field: {}", fieldName);
+                        return Mono.just(wsUrl);
+                    }
+                }
                 return Mono.error(new UpstoxAuthException("'data' field not found in authorization response"));
             }
 
-            int urlStartIdx = response.indexOf("\"authorizedRedirectUrl\"", dataStartIdx);
-            if (urlStartIdx == -1) {
-                return Mono.error(new UpstoxAuthException("'authorizedRedirectUrl' field not found in authorization response"));
+            // Try multiple possible field names for the WebSocket URL
+            String wsUrl = null;
+            for (String fieldName : new String[]{"authorizedRedirectUri", "authorized_redirect_uri", "authorizedRedirectUrl", "redirectUrl", "wsUrl", "url"}) {
+                JsonNode urlNode = data.get(fieldName);
+                if (urlNode != null && !urlNode.isNull()) {
+                    wsUrl = urlNode.asText();
+                    logger.info("Found WebSocket URL in field: {}", fieldName);
+                    break;
+                }
             }
 
-            // Find the URL value
-            int quoteStart = response.indexOf("\"", urlStartIdx + 23);
-            int quoteEnd = response.indexOf("\"", quoteStart + 1);
-
-            if (quoteStart == -1 || quoteEnd == -1) {
-                return Mono.error(new UpstoxAuthException("Invalid WebSocket URL format in response"));
+            if (wsUrl == null || wsUrl.isEmpty()) {
+                logger.error("No WebSocket URL found in response. Available fields in data: {}", data.fieldNames());
+                return Mono.error(new UpstoxAuthException("WebSocket URL not found in authorization response"));
             }
 
-            String wsUrl = response.substring(quoteStart + 1, quoteEnd);
-
-            if (!wsUrl.startsWith("wss://")) {
-                return Mono.error(new UpstoxAuthException("Invalid WebSocket URL: " + wsUrl));
+            if (!wsUrl.startsWith("wss://") && !wsUrl.startsWith("ws://")) {
+                logger.error("Invalid WebSocket URL format: {}", wsUrl);
+                return Mono.error(new UpstoxAuthException("Invalid WebSocket URL format: " + wsUrl));
             }
 
+            logger.info("Successfully parsed WebSocket URL");
             return Mono.just(wsUrl);
         } catch (Exception e) {
-            return Mono.error(new UpstoxAuthException("Failed to parse authorization response", e));
+            logger.error("Failed to parse authorization response: {}", response);
+            return Mono.error(new UpstoxAuthException("Failed to parse authorization response: " + e.getMessage(), e));
         }
     }
 

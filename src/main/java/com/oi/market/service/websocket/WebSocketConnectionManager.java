@@ -146,6 +146,13 @@ public class WebSocketConnectionManager {
     }
 
     /**
+     * Get connection start time
+     */
+    public long getConnectionStartTime() {
+        return connectionStartTime.get();
+    }
+
+    /**
      * Get uptime in milliseconds
      */
     public long getUptimeMs() {

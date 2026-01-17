@@ -1,0 +1,488 @@
+2026-01-15 20:13:25 [main] INFO  com.oi.market.MarketDataApplication - Starting MarketDataApplication using Java 25.0.1 with PID 1814 (/Volumes/dev/oi-analyzer/oi-analyzer-service/target/classes started by vaibhavk in /Volumes/dev/oi-analyzer/oi-analyzer-service)
+2026-01-15 20:13:25 [main] INFO  com.oi.market.MarketDataApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-15 20:13:27 [main] INFO  com.oi.market.MarketDataApplication - Started MarketDataApplication in 1.849 seconds (process running for 2.118)
+2026-01-15 20:13:41 [http-nio-8081-exec-3] INFO  c.o.m.service.auth.UpstoxAuthService - Generated authorization URL
+2026-01-15 20:13:41 [http-nio-8081-exec-3] INFO  c.o.market.controller.AuthController - Authorization URL generated
+2026-01-15 20:14:34 [http-nio-8081-exec-5] INFO  c.o.market.controller.AuthController - Handling OAuth callback with authorization code
+2026-01-15 20:14:35 [reactor-http-kqueue-2] INFO  c.o.market.service.auth.TokenManager - Access token updated. Next refresh at: 2026-01-16T03:00:00.567
+2026-01-15 20:14:35 [reactor-http-kqueue-2] INFO  c.o.m.service.auth.UpstoxAuthService - Access token obtained successfully
+2026-01-15 20:14:35 [reactor-http-kqueue-2] INFO  c.o.market.controller.AuthController - User authenticated successfully, redirecting to dashboard
+2026-01-15 20:14:41 [http-nio-8081-exec-10] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:14:41 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=707132de-369e-4a02-8a51-1760ab0b3f05&code=MMeBZ-be7c964b-4845-4e11-856c-4e7cc13a0e9f","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=707132de-369e-4a02-8a51-1760ab0b3f05&code=MMeBZ-be7c964b-4845-4e11-856c-4e7cc13a0e9f"}}
+2026-01-15 20:14:41 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:14:41 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:14:41 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:14:41 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:14:41 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=707132de-369e-4a02-8a51-1760ab0b3f05&code=MMeBZ-be7c964b-4845-4e11-856c-4e7cc13a0e9f
+2026-01-15 20:17:13 [http-nio-8081-exec-5] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:17:13 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=8a8b6715-d166-4131-8b54-edc30dbd285b&code=5iXOd-6f8cecb9-1ddf-4ee2-9b29-28278eb24b0f","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=8a8b6715-d166-4131-8b54-edc30dbd285b&code=5iXOd-6f8cecb9-1ddf-4ee2-9b29-28278eb24b0f"}}
+2026-01-15 20:17:13 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:17:13 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:17:13 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:17:13 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:17:13 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=8a8b6715-d166-4131-8b54-edc30dbd285b&code=5iXOd-6f8cecb9-1ddf-4ee2-9b29-28278eb24b0f
+2026-01-15 20:21:43 [http-nio-8081-exec-9] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:21:43 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=e234fd92-8c0a-4e58-9605-2568587de112&code=TBYlM-639f2116-daa4-487f-857b-c26152e58ebb","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=e234fd92-8c0a-4e58-9605-2568587de112&code=TBYlM-639f2116-daa4-487f-857b-c26152e58ebb"}}
+2026-01-15 20:21:43 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:21:43 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:21:43 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:21:43 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:21:43 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=e234fd92-8c0a-4e58-9605-2568587de112&code=TBYlM-639f2116-daa4-487f-857b-c26152e58ebb
+2026-01-15 20:25:39 [http-nio-8081-exec-4] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:25:39 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=0338adef-07c3-4f46-8cfc-f08519d3de98&code=OHkh9-30fe0cb3-f306-40f5-bc1c-9a746bae239a","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=0338adef-07c3-4f46-8cfc-f08519d3de98&code=OHkh9-30fe0cb3-f306-40f5-bc1c-9a746bae239a"}}
+2026-01-15 20:25:39 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:25:39 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:25:39 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:25:39 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:25:39 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=0338adef-07c3-4f46-8cfc-f08519d3de98&code=OHkh9-30fe0cb3-f306-40f5-bc1c-9a746bae239a
+2026-01-15 20:26:09 [http-nio-8081-exec-7] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:26:09 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=8f5b1d43-231b-4f96-9940-f4d05244fdb0&code=4aeVI-fa610fa4-5e66-481d-b84a-f52dd80fd120","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=8f5b1d43-231b-4f96-9940-f4d05244fdb0&code=4aeVI-fa610fa4-5e66-481d-b84a-f52dd80fd120"}}
+2026-01-15 20:26:09 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:26:09 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:26:09 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:26:09 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:26:09 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=8f5b1d43-231b-4f96-9940-f4d05244fdb0&code=4aeVI-fa610fa4-5e66-481d-b84a-f52dd80fd120
+2026-01-15 20:28:40 [http-nio-8081-exec-2] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:28:40 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=a6d0b17c-187a-4127-8946-4f5025ad967b&code=k3cvD-86106333-838b-4e61-ab1a-faf3f466c788","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=a6d0b17c-187a-4127-8946-4f5025ad967b&code=k3cvD-86106333-838b-4e61-ab1a-faf3f466c788"}}
+2026-01-15 20:28:40 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:28:40 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:28:40 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:28:40 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:28:40 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=a6d0b17c-187a-4127-8946-4f5025ad967b&code=k3cvD-86106333-838b-4e61-ab1a-faf3f466c788
+2026-01-15 20:29:23 [http-nio-8081-exec-5] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:29:23 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=4d3a93cc-f318-40a7-9840-a5bff4af81e3&code=YKI6F-6f8fa3d2-b980-484c-9e85-658eeeecb621","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=4d3a93cc-f318-40a7-9840-a5bff4af81e3&code=YKI6F-6f8fa3d2-b980-484c-9e85-658eeeecb621"}}
+2026-01-15 20:29:23 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:29:23 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:29:23 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:29:23 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:29:23 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=4d3a93cc-f318-40a7-9840-a5bff4af81e3&code=YKI6F-6f8fa3d2-b980-484c-9e85-658eeeecb621
+2026-01-15 20:34:19 [http-nio-8081-exec-10] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:34:19 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=9c98b4d9-ec58-4f20-bb58-4e9b08e30865&code=LfSVH-e2b2163a-a805-4194-bf84-e80ae7d7a5a7","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=9c98b4d9-ec58-4f20-bb58-4e9b08e30865&code=LfSVH-e2b2163a-a805-4194-bf84-e80ae7d7a5a7"}}
+2026-01-15 20:34:19 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:34:19 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:34:19 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:34:19 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:34:19 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=9c98b4d9-ec58-4f20-bb58-4e9b08e30865&code=LfSVH-e2b2163a-a805-4194-bf84-e80ae7d7a5a7
+2026-01-15 20:38:56 [http-nio-8081-exec-6] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:38:56 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=a02cdd81-8196-4afd-9405-6e2a0b75e728&code=P5BhT-a052ffb7-a862-4e4a-9c3b-c31b03d1a946","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=a02cdd81-8196-4afd-9405-6e2a0b75e728&code=P5BhT-a052ffb7-a862-4e4a-9c3b-c31b03d1a946"}}
+2026-01-15 20:38:56 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:38:56 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:38:56 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:38:56 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:38:56 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=a02cdd81-8196-4afd-9405-6e2a0b75e728&code=P5BhT-a052ffb7-a862-4e4a-9c3b-c31b03d1a946
+2026-01-15 20:45:36 [http-nio-8081-exec-2] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:45:36 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=5e22c772-ffac-49dc-8e29-e636d2daa578&code=7ezww-013b01b0-74a2-4109-b0ba-e5537d2faae5","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=5e22c772-ffac-49dc-8e29-e636d2daa578&code=7ezww-013b01b0-74a2-4109-b0ba-e5537d2faae5"}}
+2026-01-15 20:45:36 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:45:36 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:45:36 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:45:36 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:45:36 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=5e22c772-ffac-49dc-8e29-e636d2daa578&code=7ezww-013b01b0-74a2-4109-b0ba-e5537d2faae5
+2026-01-15 20:47:26 [http-nio-8081-exec-8] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:47:26 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=2d8e4601-9878-48e6-8d34-6f718c57a56d&code=VqoJl-8d0583a8-6b04-48a3-992f-18b6788256bd","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=2d8e4601-9878-48e6-8d34-6f718c57a56d&code=VqoJl-8d0583a8-6b04-48a3-992f-18b6788256bd"}}
+2026-01-15 20:47:26 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:47:26 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:47:26 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:47:26 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:47:26 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=2d8e4601-9878-48e6-8d34-6f718c57a56d&code=VqoJl-8d0583a8-6b04-48a3-992f-18b6788256bd
+2026-01-15 20:50:01 [http-nio-8081-exec-3] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:50:01 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=990072d6-4b25-49b8-8a3f-b2c6836a1087&code=f8ZNN-bb3f8244-d8aa-4d05-ae3f-35ad43b71a11","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=990072d6-4b25-49b8-8a3f-b2c6836a1087&code=f8ZNN-bb3f8244-d8aa-4d05-ae3f-35ad43b71a11"}}
+2026-01-15 20:50:01 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:50:01 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:50:01 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:50:01 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:50:01 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=990072d6-4b25-49b8-8a3f-b2c6836a1087&code=f8ZNN-bb3f8244-d8aa-4d05-ae3f-35ad43b71a11
+2026-01-15 20:54:16 [http-nio-8081-exec-8] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:54:16 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=a9ef80e8-c0bf-4c4d-9aab-87dcf2ec119b&code=xwHty-34874327-39df-41c5-8631-d0bf3c248cc8","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=a9ef80e8-c0bf-4c4d-9aab-87dcf2ec119b&code=xwHty-34874327-39df-41c5-8631-d0bf3c248cc8"}}
+2026-01-15 20:54:16 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:54:16 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:54:16 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:54:16 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:54:16 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=a9ef80e8-c0bf-4c4d-9aab-87dcf2ec119b&code=xwHty-34874327-39df-41c5-8631-d0bf3c248cc8
+2026-01-15 20:55:23 [http-nio-8081-exec-2] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:55:23 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=503aefe8-6463-41dd-86f8-a70690e855c0&code=Sp8eB-8798801a-9057-4e45-ba82-592ebd91348f","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=503aefe8-6463-41dd-86f8-a70690e855c0&code=Sp8eB-8798801a-9057-4e45-ba82-592ebd91348f"}}
+2026-01-15 20:55:23 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:55:23 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:55:23 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:55:23 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:55:23 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=503aefe8-6463-41dd-86f8-a70690e855c0&code=Sp8eB-8798801a-9057-4e45-ba82-592ebd91348f
+2026-01-15 20:59:08 [http-nio-8081-exec-8] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:59:08 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=03f9c814-3a54-44cb-80e2-3061b1046aee&code=iHcsL-6e03049b-f2d6-4e9d-ba10-c97ac4b9ee2a","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=03f9c814-3a54-44cb-80e2-3061b1046aee&code=iHcsL-6e03049b-f2d6-4e9d-ba10-c97ac4b9ee2a"}}
+2026-01-15 20:59:08 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:59:08 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:59:08 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:59:08 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:59:08 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=03f9c814-3a54-44cb-80e2-3061b1046aee&code=iHcsL-6e03049b-f2d6-4e9d-ba10-c97ac4b9ee2a
+2026-01-15 20:59:58 [http-nio-8081-exec-1] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 20:59:58 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=7a1817ab-eadd-4f19-b789-a7af6929c247&code=lTTXT-7ad7f809-2509-4232-9a4b-662f1a10a8dd","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=7a1817ab-eadd-4f19-b789-a7af6929c247&code=lTTXT-7ad7f809-2509-4232-9a4b-662f1a10a8dd"}}
+2026-01-15 20:59:58 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 20:59:58 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 20:59:58 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 20:59:58 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 20:59:58 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=7a1817ab-eadd-4f19-b789-a7af6929c247&code=lTTXT-7ad7f809-2509-4232-9a4b-662f1a10a8dd
+2026-01-15 21:02:26 [http-nio-8081-exec-5] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 21:02:26 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=d4a1631a-ffe3-4d7c-9f9e-e02c4ee1745d&code=VjJcW-507ec035-a144-4b6f-a937-48fcc329a52c","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=d4a1631a-ffe3-4d7c-9f9e-e02c4ee1745d&code=VjJcW-507ec035-a144-4b6f-a937-48fcc329a52c"}}
+2026-01-15 21:02:26 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 21:02:26 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 21:02:26 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 21:02:26 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 21:02:26 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=d4a1631a-ffe3-4d7c-9f9e-e02c4ee1745d&code=VjJcW-507ec035-a144-4b6f-a937-48fcc329a52c
+2026-01-15 21:02:53 [http-nio-8081-exec-8] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 21:02:53 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=440a65de-e6ff-4e6b-a161-e48491b14f45&code=ODQQh-456d0bb9-c3b2-4a82-b337-fe28cbdbadb7","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=440a65de-e6ff-4e6b-a161-e48491b14f45&code=ODQQh-456d0bb9-c3b2-4a82-b337-fe28cbdbadb7"}}
+2026-01-15 21:02:53 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 21:02:53 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 21:02:53 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 21:02:53 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 21:02:53 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=440a65de-e6ff-4e6b-a161-e48491b14f45&code=ODQQh-456d0bb9-c3b2-4a82-b337-fe28cbdbadb7
+2026-01-15 21:03:57 [http-nio-8081-exec-2] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 21:03:57 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=94197853-a2a0-4a85-8094-8d7f0cf7e61e&code=QiDoU-a0d66f76-d47c-4977-9c6b-399bc48694b8","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=94197853-a2a0-4a85-8094-8d7f0cf7e61e&code=QiDoU-a0d66f76-d47c-4977-9c6b-399bc48694b8"}}
+2026-01-15 21:03:57 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 21:03:57 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 21:03:57 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 21:03:57 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 21:03:57 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=94197853-a2a0-4a85-8094-8d7f0cf7e61e&code=QiDoU-a0d66f76-d47c-4977-9c6b-399bc48694b8
+2026-01-15 21:07:01 [http-nio-8081-exec-7] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 21:07:01 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=4bbff7d1-a051-47c8-8cc2-783867281d34&code=XLiqc-3fd06312-6de4-445d-8cd5-bdebdd21d4c9","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=4bbff7d1-a051-47c8-8cc2-783867281d34&code=XLiqc-3fd06312-6de4-445d-8cd5-bdebdd21d4c9"}}
+2026-01-15 21:07:01 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 21:07:01 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 21:07:01 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 21:07:01 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 21:07:01 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=4bbff7d1-a051-47c8-8cc2-783867281d34&code=XLiqc-3fd06312-6de4-445d-8cd5-bdebdd21d4c9
+2026-01-15 21:14:28 [http-nio-8081-exec-4] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 21:14:28 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=f4d7779b-d8d4-486e-af94-4105a7ba195b&code=KVkZr-4b86a36c-f1da-4c4c-9e8c-7c727883cdec","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=f4d7779b-d8d4-486e-af94-4105a7ba195b&code=KVkZr-4b86a36c-f1da-4c4c-9e8c-7c727883cdec"}}
+2026-01-15 21:14:28 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 21:14:28 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 21:14:28 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 21:14:28 [reactor-http-kqueue-3] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 21:14:28 [reactor-http-kqueue-3] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=f4d7779b-d8d4-486e-af94-4105a7ba195b&code=KVkZr-4b86a36c-f1da-4c4c-9e8c-7c727883cdec
+2026-01-15 21:17:57 [http-nio-8081-exec-2] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 21:17:57 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=3f9999c7-b514-4379-a128-18edc435a9db&code=gek6h-7b5c0a58-c8ba-46fc-948d-7bcc2bdece1e","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=3f9999c7-b514-4379-a128-18edc435a9db&code=gek6h-7b5c0a58-c8ba-46fc-948d-7bcc2bdece1e"}}
+2026-01-15 21:17:57 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 21:17:57 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 21:17:57 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 21:17:57 [reactor-http-kqueue-3] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 21:17:57 [reactor-http-kqueue-3] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=3f9999c7-b514-4379-a128-18edc435a9db&code=gek6h-7b5c0a58-c8ba-46fc-948d-7bcc2bdece1e
+2026-01-15 21:20:31 [http-nio-8081-exec-1] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 21:20:31 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=af0cd3d5-3026-457a-84ba-8fc7293e9bd2&code=nagg6-45b4043d-f71f-4fb1-bd60-aaaae19abfbe","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=af0cd3d5-3026-457a-84ba-8fc7293e9bd2&code=nagg6-45b4043d-f71f-4fb1-bd60-aaaae19abfbe"}}
+2026-01-15 21:20:31 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 21:20:31 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 21:20:31 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 21:20:31 [reactor-http-kqueue-3] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 21:20:31 [reactor-http-kqueue-3] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=af0cd3d5-3026-457a-84ba-8fc7293e9bd2&code=nagg6-45b4043d-f71f-4fb1-bd60-aaaae19abfbe
+2026-01-15 21:21:57 [http-nio-8081-exec-9] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 21:21:57 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=649af2f9-8c6b-43da-b485-e2bb089b966d&code=OtkWH-644a9b92-237c-4691-a147-44cd5c8f6bcc","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=649af2f9-8c6b-43da-b485-e2bb089b966d&code=OtkWH-644a9b92-237c-4691-a147-44cd5c8f6bcc"}}
+2026-01-15 21:21:57 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 21:21:57 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 21:21:57 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 21:21:57 [reactor-http-kqueue-3] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 21:21:57 [reactor-http-kqueue-3] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=649af2f9-8c6b-43da-b485-e2bb089b966d&code=OtkWH-644a9b92-237c-4691-a147-44cd5c8f6bcc
+2026-01-15 21:22:37 [http-nio-8081-exec-3] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 21:22:37 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=3d844d85-3b02-474d-85c2-6e60a281a632&code=z0jE1-ac0d2510-325a-4e9d-ae65-f4378d9dedb3","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=3d844d85-3b02-474d-85c2-6e60a281a632&code=z0jE1-ac0d2510-325a-4e9d-ae65-f4378d9dedb3"}}
+2026-01-15 21:22:37 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 21:22:37 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 21:22:37 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 21:22:37 [reactor-http-kqueue-3] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 21:22:37 [reactor-http-kqueue-3] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=3d844d85-3b02-474d-85c2-6e60a281a632&code=z0jE1-ac0d2510-325a-4e9d-ae65-f4378d9dedb3
+2026-01-15 21:26:21 [http-nio-8081-exec-9] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 21:26:21 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=80a807df-3029-40b1-af86-225cefd5aae5&code=T6Npf-76bc057b-15af-4107-a995-919461f4288f","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=80a807df-3029-40b1-af86-225cefd5aae5&code=T6Npf-76bc057b-15af-4107-a995-919461f4288f"}}
+2026-01-15 21:26:21 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 21:26:21 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 21:26:21 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 21:26:21 [reactor-http-kqueue-3] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 21:26:21 [reactor-http-kqueue-3] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=80a807df-3029-40b1-af86-225cefd5aae5&code=T6Npf-76bc057b-15af-4107-a995-919461f4288f
+2026-01-15 22:00:10 [http-nio-8081-exec-5] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:00:10 [reactor-http-kqueue-3] WARN  r.n.http.client.HttpClientConnect - [a09ab637-7, L:/192.168.1.37:63486 - R:api.upstox.com/104.18.40.77:443] The connection observed an error, the request cannot be retried as the headers/body were sent
+io.netty.channel.unix.Errors$NativeIoException: readAddress(..) failed: Connection reset by peer
+2026-01-15 22:00:10 [reactor-http-kqueue-3] ERROR c.o.m.s.a.MarketDataAuthorizeService - Failed to get authorized WebSocket URL
+org.springframework.web.reactive.function.client.WebClientRequestException: readAddress(..) failed: Connection reset by peer
+	at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Request to GET https://api.upstox.com/v3/feed/market-data-feed/authorize [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136)
+		at reactor.core.publisher.MonoErrorSupplied.subscribe(MonoErrorSupplied.java:55)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4512)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93)
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onError(MonoFlatMapMany.java:204)
+		at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.whenError(FluxRetryWhen.java:228)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenOtherSubscriber.onError(FluxRetryWhen.java:278)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.maybeOnError(FluxConcatMapNoPrefetch.java:326)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onNext(FluxConcatMapNoPrefetch.java:211)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+		at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476)
+		at reactor.core.publisher.SinkManyEmitterProcessor$EmitterInner.drainParent(SinkManyEmitterProcessor.java:620)
+		at reactor.core.publisher.FluxPublish$PubSubInner.request(FluxPublish.java:874)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:336)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136)
+		at reactor.core.publisher.Operators$DeferredSubscription.request(Operators.java:1743)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onError(FluxRetryWhen.java:195)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205)
+		at reactor.netty.http.client.HttpClientConnect$HttpObserver.onUncaughtException(HttpClientConnect.java:403)
+		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onUncaughtException(ReactorNetty.java:703)
+		at reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onUncaughtException(DefaultPooledConnectionProvider.java:223)
+		at reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnection.onUncaughtException(DefaultPooledConnectionProvider.java:476)
+		at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:247)
+		at reactor.netty.channel.FluxReceive.onInboundError(FluxReceive.java:468)
+		at reactor.netty.channel.ChannelOperations.onInboundError(ChannelOperations.java:515)
+		at reactor.netty.channel.ChannelOperationsHandler.exceptionCaught(ChannelOperationsHandler.java:145)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+		at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:317)
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireExceptionCaught(CombinedChannelDuplexHandler.java:424)
+		at io.netty.channel.ChannelHandlerAdapter.exceptionCaught(ChannelHandlerAdapter.java:92)
+		at io.netty.channel.CombinedChannelDuplexHandler$1.fireExceptionCaught(CombinedChannelDuplexHandler.java:145)
+		at io.netty.channel.ChannelInboundHandlerAdapter.exceptionCaught(ChannelInboundHandlerAdapter.java:143)
+		at io.netty.channel.CombinedChannelDuplexHandler.exceptionCaught(CombinedChannelDuplexHandler.java:231)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+		at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:317)
+		at io.netty.handler.ssl.SslHandler.exceptionCaught(SslHandler.java:1204)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+		at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:317)
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.exceptionCaught(DefaultChannelPipeline.java:1377)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+		at io.netty.channel.DefaultChannelPipeline.fireExceptionCaught(DefaultChannelPipeline.java:907)
+		at io.netty.channel.kqueue.AbstractKQueueStreamChannel$KQueueStreamUnsafe.handleReadException(AbstractKQueueStreamChannel.java:589)
+		at io.netty.channel.kqueue.AbstractKQueueStreamChannel$KQueueStreamUnsafe.readReady(AbstractKQueueStreamChannel.java:570)
+		at io.netty.channel.kqueue.AbstractKQueueChannel$AbstractKQueueUnsafe.readEOF(AbstractKQueueChannel.java:490)
+		at io.netty.channel.kqueue.KQueueEventLoop.processReady(KQueueEventLoop.java:220)
+		at io.netty.channel.kqueue.KQueueEventLoop.run(KQueueEventLoop.java:296)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: io.netty.channel.unix.Errors$NativeIoException: readAddress(..) failed: Connection reset by peer
+2026-01-15 22:00:10 [reactor-http-kqueue-3] ERROR c.o.m.controller.WebSocketController - Failed to initiate WebSocket connection
+org.springframework.web.reactive.function.client.WebClientRequestException: readAddress(..) failed: Connection reset by peer
+	at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Request to GET https://api.upstox.com/v3/feed/market-data-feed/authorize [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136)
+		at reactor.core.publisher.MonoErrorSupplied.subscribe(MonoErrorSupplied.java:55)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4512)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93)
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onError(MonoFlatMapMany.java:204)
+		at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.whenError(FluxRetryWhen.java:228)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenOtherSubscriber.onError(FluxRetryWhen.java:278)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.maybeOnError(FluxConcatMapNoPrefetch.java:326)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onNext(FluxConcatMapNoPrefetch.java:211)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+		at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476)
+		at reactor.core.publisher.SinkManyEmitterProcessor$EmitterInner.drainParent(SinkManyEmitterProcessor.java:620)
+		at reactor.core.publisher.FluxPublish$PubSubInner.request(FluxPublish.java:874)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:336)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136)
+		at reactor.core.publisher.Operators$DeferredSubscription.request(Operators.java:1743)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onError(FluxRetryWhen.java:195)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205)
+		at reactor.netty.http.client.HttpClientConnect$HttpObserver.onUncaughtException(HttpClientConnect.java:403)
+		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onUncaughtException(ReactorNetty.java:703)
+		at reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onUncaughtException(DefaultPooledConnectionProvider.java:223)
+		at reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnection.onUncaughtException(DefaultPooledConnectionProvider.java:476)
+		at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:247)
+		at reactor.netty.channel.FluxReceive.onInboundError(FluxReceive.java:468)
+		at reactor.netty.channel.ChannelOperations.onInboundError(ChannelOperations.java:515)
+		at reactor.netty.channel.ChannelOperationsHandler.exceptionCaught(ChannelOperationsHandler.java:145)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+		at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:317)
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireExceptionCaught(CombinedChannelDuplexHandler.java:424)
+		at io.netty.channel.ChannelHandlerAdapter.exceptionCaught(ChannelHandlerAdapter.java:92)
+		at io.netty.channel.CombinedChannelDuplexHandler$1.fireExceptionCaught(CombinedChannelDuplexHandler.java:145)
+		at io.netty.channel.ChannelInboundHandlerAdapter.exceptionCaught(ChannelInboundHandlerAdapter.java:143)
+		at io.netty.channel.CombinedChannelDuplexHandler.exceptionCaught(CombinedChannelDuplexHandler.java:231)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+		at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:317)
+		at io.netty.handler.ssl.SslHandler.exceptionCaught(SslHandler.java:1204)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+		at io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:317)
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.exceptionCaught(DefaultChannelPipeline.java:1377)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+		at io.netty.channel.DefaultChannelPipeline.fireExceptionCaught(DefaultChannelPipeline.java:907)
+		at io.netty.channel.kqueue.AbstractKQueueStreamChannel$KQueueStreamUnsafe.handleReadException(AbstractKQueueStreamChannel.java:589)
+		at io.netty.channel.kqueue.AbstractKQueueStreamChannel$KQueueStreamUnsafe.readReady(AbstractKQueueStreamChannel.java:570)
+		at io.netty.channel.kqueue.AbstractKQueueChannel$AbstractKQueueUnsafe.readEOF(AbstractKQueueChannel.java:490)
+		at io.netty.channel.kqueue.KQueueEventLoop.processReady(KQueueEventLoop.java:220)
+		at io.netty.channel.kqueue.KQueueEventLoop.run(KQueueEventLoop.java:296)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: io.netty.channel.unix.Errors$NativeIoException: readAddress(..) failed: Connection reset by peer
+2026-01-15 22:00:36 [http-nio-8081-exec-9] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:00:36 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=7e1baa41-9433-4e00-9cce-e6677798b023&code=MjK4V-7be58c72-d90c-4c61-bf54-f86f855d58c6","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=7e1baa41-9433-4e00-9cce-e6677798b023&code=MjK4V-7be58c72-d90c-4c61-bf54-f86f855d58c6"}}
+2026-01-15 22:00:36 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:00:36 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:00:36 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:00:36 [reactor-http-kqueue-4] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:00:36 [reactor-http-kqueue-4] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=7e1baa41-9433-4e00-9cce-e6677798b023&code=MjK4V-7be58c72-d90c-4c61-bf54-f86f855d58c6
+2026-01-15 22:02:41 [http-nio-8081-exec-3] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:02:41 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=686d7774-cf66-4271-a79e-aacfd807444a&code=3Bchp-579becf6-a5dc-4052-ad22-0b814cb3f982","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=686d7774-cf66-4271-a79e-aacfd807444a&code=3Bchp-579becf6-a5dc-4052-ad22-0b814cb3f982"}}
+2026-01-15 22:02:41 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:02:41 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:02:41 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:02:41 [reactor-http-kqueue-4] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:02:41 [reactor-http-kqueue-4] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=686d7774-cf66-4271-a79e-aacfd807444a&code=3Bchp-579becf6-a5dc-4052-ad22-0b814cb3f982
+2026-01-15 22:03:11 [http-nio-8081-exec-6] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:03:11 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=9bddd799-ee92-45c8-a529-62a7c9af1cd3&code=gohD9-20285227-a001-4448-95f4-937d4fde921a","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=9bddd799-ee92-45c8-a529-62a7c9af1cd3&code=gohD9-20285227-a001-4448-95f4-937d4fde921a"}}
+2026-01-15 22:03:11 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:03:11 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:03:11 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:03:11 [reactor-http-kqueue-4] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:03:11 [reactor-http-kqueue-4] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=9bddd799-ee92-45c8-a529-62a7c9af1cd3&code=gohD9-20285227-a001-4448-95f4-937d4fde921a
+2026-01-15 22:03:31 [http-nio-8081-exec-9] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:03:31 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=28685ebe-e26b-49db-bb34-f1d721eefce2&code=HdB61-79eb26ed-058c-4dea-94d6-78514547e01a","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=28685ebe-e26b-49db-bb34-f1d721eefce2&code=HdB61-79eb26ed-058c-4dea-94d6-78514547e01a"}}
+2026-01-15 22:03:31 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:03:31 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:03:31 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:03:31 [reactor-http-kqueue-4] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:03:31 [reactor-http-kqueue-4] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=28685ebe-e26b-49db-bb34-f1d721eefce2&code=HdB61-79eb26ed-058c-4dea-94d6-78514547e01a
+2026-01-15 22:04:42 [http-nio-8081-exec-4] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:04:42 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=64db2eab-8dbf-4521-b304-b734a78da84e&code=xnJT3-ed807ccf-23db-4b6d-b219-678208c78b05","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=64db2eab-8dbf-4521-b304-b734a78da84e&code=xnJT3-ed807ccf-23db-4b6d-b219-678208c78b05"}}
+2026-01-15 22:04:42 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:04:42 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:04:42 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:04:42 [reactor-http-kqueue-4] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:04:42 [reactor-http-kqueue-4] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=64db2eab-8dbf-4521-b304-b734a78da84e&code=xnJT3-ed807ccf-23db-4b6d-b219-678208c78b05
+2026-01-15 22:04:55 [http-nio-8081-exec-7] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:04:55 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=4a917b61-9a5a-4c76-b889-a59260e24dc5&code=pvjv9-aa30e89c-265d-4afd-83b8-b653edc9a67d","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=4a917b61-9a5a-4c76-b889-a59260e24dc5&code=pvjv9-aa30e89c-265d-4afd-83b8-b653edc9a67d"}}
+2026-01-15 22:04:55 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:04:55 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:04:55 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:04:55 [reactor-http-kqueue-4] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:04:55 [reactor-http-kqueue-4] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=4a917b61-9a5a-4c76-b889-a59260e24dc5&code=pvjv9-aa30e89c-265d-4afd-83b8-b653edc9a67d
+2026-01-15 22:06:29 [http-nio-8081-exec-1] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:06:29 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=427f3a2c-acfa-4c10-9e66-fc773bfd1fd6&code=vWHX6-c4d2474d-1412-45cd-94fd-6d5acd63485c","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=427f3a2c-acfa-4c10-9e66-fc773bfd1fd6&code=vWHX6-c4d2474d-1412-45cd-94fd-6d5acd63485c"}}
+2026-01-15 22:06:29 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:06:29 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:06:29 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:06:29 [reactor-http-kqueue-4] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:06:29 [reactor-http-kqueue-4] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=427f3a2c-acfa-4c10-9e66-fc773bfd1fd6&code=vWHX6-c4d2474d-1412-45cd-94fd-6d5acd63485c
+2026-01-15 22:11:47 [main] INFO  com.oi.market.MarketDataApplication - Starting MarketDataApplication using Java 25.0.1 with PID 23800 (/Volumes/dev/oi-analyzer/oi-analyzer-service/target/classes started by vaibhavk in /Volumes/dev/oi-analyzer/oi-analyzer-service)
+2026-01-15 22:11:47 [main] INFO  com.oi.market.MarketDataApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-15 22:11:49 [main] INFO  com.oi.market.MarketDataApplication - Started MarketDataApplication in 1.676 seconds (process running for 1.867)
+2026-01-15 22:12:09 [http-nio-8081-exec-4] INFO  c.o.m.service.auth.UpstoxAuthService - Generated authorization URL
+2026-01-15 22:12:09 [http-nio-8081-exec-4] INFO  c.o.market.controller.AuthController - Authorization URL generated
+2026-01-15 22:12:14 [http-nio-8081-exec-5] INFO  c.o.market.controller.AuthController - Handling OAuth callback with authorization code
+2026-01-15 22:12:14 [reactor-http-kqueue-2] INFO  c.o.market.service.auth.TokenManager - Access token updated. Next refresh at: 2026-01-16T03:00:00.336
+2026-01-15 22:12:14 [reactor-http-kqueue-2] INFO  c.o.m.service.auth.UpstoxAuthService - Access token obtained successfully
+2026-01-15 22:12:14 [reactor-http-kqueue-2] INFO  c.o.market.controller.AuthController - User authenticated successfully, redirecting to dashboard
+2026-01-15 22:12:21 [http-nio-8081-exec-9] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:12:21 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=7d7e7485-ea55-4db0-9dd5-fc8c23885fdd&code=1WkYR-b4f0b411-0a90-49ad-8588-2e3e87738020","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=7d7e7485-ea55-4db0-9dd5-fc8c23885fdd&code=1WkYR-b4f0b411-0a90-49ad-8588-2e3e87738020"}}
+2026-01-15 22:12:21 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:12:21 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:12:21 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:12:21 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:12:21 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=7d7e7485-ea55-4db0-9dd5-fc8c23885fdd&code=1WkYR-b4f0b411-0a90-49ad-8588-2e3e87738020
+2026-01-15 22:13:27 [http-nio-8081-exec-5] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:13:27 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=2b24dbd4-c4aa-4423-be74-f98d410d67ee&code=vsxRw-8c61cb92-bab5-4228-92c8-adec5ac2a3e9","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=2b24dbd4-c4aa-4423-be74-f98d410d67ee&code=vsxRw-8c61cb92-bab5-4228-92c8-adec5ac2a3e9"}}
+2026-01-15 22:13:27 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:13:27 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:13:27 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:13:27 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:13:27 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=2b24dbd4-c4aa-4423-be74-f98d410d67ee&code=vsxRw-8c61cb92-bab5-4228-92c8-adec5ac2a3e9
+2026-01-15 22:13:49 [http-nio-8081-exec-8] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:13:49 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=3026c51a-8b97-46ee-9ea4-df7de2719696&code=PhJpR-1571402f-7e90-4a85-a560-baec29b81ef7","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=3026c51a-8b97-46ee-9ea4-df7de2719696&code=PhJpR-1571402f-7e90-4a85-a560-baec29b81ef7"}}
+2026-01-15 22:13:49 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:13:49 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:13:49 [reactor-http-kqueue-2] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:13:49 [reactor-http-kqueue-2] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:13:49 [reactor-http-kqueue-2] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=3026c51a-8b97-46ee-9ea4-df7de2719696&code=PhJpR-1571402f-7e90-4a85-a560-baec29b81ef7
+2026-01-15 22:23:35 [http-nio-8081-exec-3] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:23:35 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=0663ac61-4814-4017-9e51-c71d2a41623a&code=2zjYI-5ced778b-b63a-4a05-abae-5a86f69dc700","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=0663ac61-4814-4017-9e51-c71d2a41623a&code=2zjYI-5ced778b-b63a-4a05-abae-5a86f69dc700"}}
+2026-01-15 22:23:35 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:23:35 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:23:35 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:23:35 [reactor-http-kqueue-3] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:23:35 [reactor-http-kqueue-3] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=0663ac61-4814-4017-9e51-c71d2a41623a&code=2zjYI-5ced778b-b63a-4a05-abae-5a86f69dc700
+2026-01-15 22:23:47 [http-nio-8081-exec-6] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:23:47 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=595c4807-3064-4c75-930a-2d816aef2092&code=6CLqQ-483a3bc6-e3dd-4f00-8fa6-8fae8a2930b9","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=595c4807-3064-4c75-930a-2d816aef2092&code=6CLqQ-483a3bc6-e3dd-4f00-8fa6-8fae8a2930b9"}}
+2026-01-15 22:23:47 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:23:47 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:23:47 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:23:47 [reactor-http-kqueue-3] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:23:47 [reactor-http-kqueue-3] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=595c4807-3064-4c75-930a-2d816aef2092&code=6CLqQ-483a3bc6-e3dd-4f00-8fa6-8fae8a2930b9
+2026-01-15 22:25:55 [http-nio-8081-exec-1] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:25:55 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=e0eb22b0-a3f4-4523-95a0-d08cd304bf2b&code=krMu5-70db0b5d-53a5-48bd-9d76-567443839294","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=e0eb22b0-a3f4-4523-95a0-d08cd304bf2b&code=krMu5-70db0b5d-53a5-48bd-9d76-567443839294"}}
+2026-01-15 22:25:55 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:25:55 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:25:55 [reactor-http-kqueue-3] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:25:55 [reactor-http-kqueue-3] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:25:55 [reactor-http-kqueue-3] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=e0eb22b0-a3f4-4523-95a0-d08cd304bf2b&code=krMu5-70db0b5d-53a5-48bd-9d76-567443839294
+2026-01-15 22:41:44 [http-nio-8081-exec-1] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:41:44 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=16036930-64dd-44f1-89e5-f0a1c385c7bf&code=Zy1Ut-a0b365f2-d3f0-4b8c-85e4-96548f41b4af","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=16036930-64dd-44f1-89e5-f0a1c385c7bf&code=Zy1Ut-a0b365f2-d3f0-4b8c-85e4-96548f41b4af"}}
+2026-01-15 22:41:44 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:41:44 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:41:44 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:41:44 [reactor-http-kqueue-4] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:41:44 [reactor-http-kqueue-4] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=16036930-64dd-44f1-89e5-f0a1c385c7bf&code=Zy1Ut-a0b365f2-d3f0-4b8c-85e4-96548f41b4af
+2026-01-15 22:42:32 [http-nio-8081-exec-4] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:42:32 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=981ccc01-2ac0-482d-ad9c-82cc2a6b2a56&code=I8csL-bf690dfb-3c92-479a-b0d7-a83658fbc88b","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=981ccc01-2ac0-482d-ad9c-82cc2a6b2a56&code=I8csL-bf690dfb-3c92-479a-b0d7-a83658fbc88b"}}
+2026-01-15 22:42:32 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:42:32 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:42:32 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:42:32 [reactor-http-kqueue-4] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:42:32 [reactor-http-kqueue-4] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=981ccc01-2ac0-482d-ad9c-82cc2a6b2a56&code=I8csL-bf690dfb-3c92-479a-b0d7-a83658fbc88b
+2026-01-15 22:44:09 [http-nio-8081-exec-8] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:44:09 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=19645791-ffda-4c2e-ba5f-df31ed08df3d&code=EGDOE-563fefa8-6c05-4d6a-ba06-931987f513bd","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=19645791-ffda-4c2e-ba5f-df31ed08df3d&code=EGDOE-563fefa8-6c05-4d6a-ba06-931987f513bd"}}
+2026-01-15 22:44:09 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:44:09 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:44:09 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:44:09 [reactor-http-kqueue-4] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:44:09 [reactor-http-kqueue-4] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=19645791-ffda-4c2e-ba5f-df31ed08df3d&code=EGDOE-563fefa8-6c05-4d6a-ba06-931987f513bd
+2026-01-15 22:44:43 [http-nio-8081-exec-1] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:44:43 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=946e3e6f-3627-4bd8-b21e-d37ed87a62a4&code=288vS-70f1050f-72da-40a4-b982-93f91696c036","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=946e3e6f-3627-4bd8-b21e-d37ed87a62a4&code=288vS-70f1050f-72da-40a4-b982-93f91696c036"}}
+2026-01-15 22:44:43 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:44:43 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:44:43 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:44:43 [reactor-http-kqueue-4] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:44:43 [reactor-http-kqueue-4] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=946e3e6f-3627-4bd8-b21e-d37ed87a62a4&code=288vS-70f1050f-72da-40a4-b982-93f91696c036
+2026-01-15 22:48:51 [http-nio-8081-exec-7] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:48:51 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=340250b0-5351-42fc-aaf1-4c4fd7b16442&code=IU8Wu-7fca212d-b053-4560-a9c6-84a6aa635cca","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=340250b0-5351-42fc-aaf1-4c4fd7b16442&code=IU8Wu-7fca212d-b053-4560-a9c6-84a6aa635cca"}}
+2026-01-15 22:48:51 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:48:51 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:48:51 [reactor-http-kqueue-4] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:48:51 [reactor-http-kqueue-4] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:48:51 [reactor-http-kqueue-4] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=340250b0-5351-42fc-aaf1-4c4fd7b16442&code=IU8Wu-7fca212d-b053-4560-a9c6-84a6aa635cca
+2026-01-15 22:56:44 [http-nio-8081-exec-5] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 22:56:44 [reactor-http-kqueue-5] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=222b1077-ad00-4020-bbc1-799a52fede8d&code=w8O1r-ad261ec3-07fc-4067-8788-7268eff6bb93","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=222b1077-ad00-4020-bbc1-799a52fede8d&code=w8O1r-ad261ec3-07fc-4067-8788-7268eff6bb93"}}
+2026-01-15 22:56:44 [reactor-http-kqueue-5] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 22:56:44 [reactor-http-kqueue-5] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 22:56:44 [reactor-http-kqueue-5] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 22:56:44 [reactor-http-kqueue-5] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 22:56:44 [reactor-http-kqueue-5] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=222b1077-ad00-4020-bbc1-799a52fede8d&code=w8O1r-ad261ec3-07fc-4067-8788-7268eff6bb93
+2026-01-15 23:01:39 [http-nio-8081-exec-2] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 23:01:39 [reactor-http-kqueue-5] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=6f536e13-e3b4-4c91-a6b8-fdffede8024b&code=Ni1eq-55630a3b-dcd2-4aa9-b21c-ec9c3e9c676f","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=6f536e13-e3b4-4c91-a6b8-fdffede8024b&code=Ni1eq-55630a3b-dcd2-4aa9-b21c-ec9c3e9c676f"}}
+2026-01-15 23:01:39 [reactor-http-kqueue-5] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 23:01:39 [reactor-http-kqueue-5] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 23:01:39 [reactor-http-kqueue-5] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 23:01:39 [reactor-http-kqueue-5] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 23:01:39 [reactor-http-kqueue-5] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=6f536e13-e3b4-4c91-a6b8-fdffede8024b&code=Ni1eq-55630a3b-dcd2-4aa9-b21c-ec9c3e9c676f
+2026-01-15 23:03:21 [http-nio-8081-exec-8] INFO  c.o.m.controller.WebSocketController - Attempting to establish WebSocket connection
+2026-01-15 23:03:21 [reactor-http-kqueue-5] INFO  c.o.m.s.a.MarketDataAuthorizeService - Full authorization response: {"status":"success","data":{"authorizedRedirectUri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=9bedd05f-ee77-4b05-863d-4366721a9a53&code=QhwvP-bccd6813-7a45-4962-b685-fc89026d7b25","authorized_redirect_uri":"wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=9bedd05f-ee77-4b05-863d-4366721a9a53&code=QhwvP-bccd6813-7a45-4962-b685-fc89026d7b25"}}
+2026-01-15 23:03:21 [reactor-http-kqueue-5] INFO  c.o.m.s.a.MarketDataAuthorizeService - Found WebSocket URL in field: authorizedRedirectUri
+2026-01-15 23:03:21 [reactor-http-kqueue-5] INFO  c.o.m.s.a.MarketDataAuthorizeService - Successfully parsed WebSocket URL
+2026-01-15 23:03:21 [reactor-http-kqueue-5] INFO  c.o.m.s.a.MarketDataAuthorizeService - Obtained WebSocket URL: wss://wsfeeder-api.u...
+2026-01-15 23:03:21 [reactor-http-kqueue-5] INFO  c.o.m.s.w.WebSocketConnectionManager - WebSocket connected: wss://wsfeeder-api.u...
+2026-01-15 23:03:21 [reactor-http-kqueue-5] INFO  c.o.m.controller.WebSocketController - WebSocket connection initiated with URL: wss://wsfeeder-api.upstox.com/market-data-feeder/v3/upstox-developer-api/feeds?requestId=9bedd05f-ee77-4b05-863d-4366721a9a53&code=QhwvP-bccd6813-7a45-4962-b685-fc89026d7b25
