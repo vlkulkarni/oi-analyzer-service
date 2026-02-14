@@ -1,6 +1,8 @@
 package com.oi.market.service.auth;
 
 import com.oi.market.exception.UpstoxAuthException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,6 +26,7 @@ public class UpstoxAuthService {
     private static final Logger logger = LoggerFactory.getLogger(UpstoxAuthService.class);
     private static final String AUTH_ENDPOINT = "https://api.upstox.com/v2/login/authorization/dialog";
     private static final String TOKEN_ENDPOINT = "https://api.upstox.com/v2/login/authorization/token";
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
     @Value("${upstox.api.client-id}")
     private String clientId;
@@ -126,28 +129,52 @@ public class UpstoxAuthService {
 
     /**
      * Parse access token from OAuth2 response
-     * Expects JSON response with "access_token" field
+     * Handles various response formats from Upstox API
      */
     private Mono<String> parseTokenResponse(String response) {
         try {
-            // Simple JSON parsing for access_token
-            // In production, use Jackson or other JSON library
-            int startIdx = response.indexOf("\"access_token\":");
-            if (startIdx == -1) {
-                return Mono.error(new UpstoxAuthException("access_token not found in response"));
+            logger.debug("Token response: {}", response);
+            
+            // Try Jackson JSON parsing first
+            JsonNode root = objectMapper.readTree(response);
+            
+            // Check for standard access_token field
+            JsonNode tokenNode = root.get("access_token");
+            if (tokenNode != null && !tokenNode.isNull()) {
+                String token = tokenNode.asText();
+                if (!token.isEmpty()) {
+                    logger.info("Successfully extracted access_token from response");
+                    return Mono.just(token);
+                }
             }
-
-            startIdx = response.indexOf("\"", startIdx + 15);
-            int endIdx = response.indexOf("\"", startIdx + 1);
-
-            if (startIdx == -1 || endIdx == -1) {
-                return Mono.error(new UpstoxAuthException("Invalid token format in response"));
+            
+            // Check for data wrapper (Upstox uses this pattern)
+            JsonNode dataNode = root.get("data");
+            if (dataNode != null && !dataNode.isNull()) {
+                JsonNode dataTokenNode = dataNode.get("access_token");
+                if (dataTokenNode != null && !dataTokenNode.isNull()) {
+                    String token = dataTokenNode.asText();
+                    if (!token.isEmpty()) {
+                        logger.info("Successfully extracted access_token from data wrapper");
+                        return Mono.just(token);
+                    }
+                }
             }
-
-            String token = response.substring(startIdx + 1, endIdx);
-            return Mono.just(token);
+            
+            // Log available fields for debugging
+            logger.warn("access_token not found in expected locations. Available fields: {}", 
+                    root.fieldNames());
+            
+            java.util.List<String> fieldNames = new java.util.ArrayList<>();
+            root.fieldNames().forEachRemaining(fieldNames::add);
+            
+            return Mono.error(new UpstoxAuthException(
+                    "access_token not found in response. Response keys: " + 
+                    String.join(", ", fieldNames)));
+                    
         } catch (Exception e) {
-            return Mono.error(new UpstoxAuthException("Failed to parse token response", e));
+            logger.error("Failed to parse token response: {}", response, e);
+            return Mono.error(new UpstoxAuthException("Failed to parse token response: " + e.getMessage(), e));
         }
     }
 

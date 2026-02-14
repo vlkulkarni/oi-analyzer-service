@@ -1,6 +1,5 @@
 package com.oi.market.controller;
 
-import com.oi.market.dto.ApiResponse;
 import com.oi.market.service.auth.UpstoxAuthService;
 import com.oi.market.service.auth.TokenManager;
 import org.slf4j.Logger;
@@ -8,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 import java.net.URI;
@@ -74,19 +72,30 @@ public class AuthController {
         return authService.exchangeCodeForToken(code)
                 .map(token -> {
                     logger.info("User authenticated successfully, redirecting to dashboard");
-                    // Redirect to frontend dashboard
-                    return ResponseEntity.status(HttpStatus.FOUND)
-                            .location(URI.create("http://localhost:3000/"))
-                            .<Void>build();
+                    // Token is already stored in TokenManager by exchangeCodeForToken
+                    // Redirect to frontend dashboard with success parameter
+                    try {
+                        return ResponseEntity.status(HttpStatus.FOUND)
+                                .location(new URI("http://localhost:3000/?auth=success"))
+                                .<Void>build();
+                    } catch (Exception e) {
+                        logger.error("Failed to create redirect URI", e);
+                        throw new RuntimeException("Redirect failed", e);
+                    }
                 })
                 .onErrorResume(error -> {
                     logger.error("Authentication failed", error);
                     // Redirect to login page with error message
                     String errorMessage = error.getMessage();
-                    return Mono.just(ResponseEntity.status(HttpStatus.FOUND)
-                            .location(URI.create("http://localhost:3000/login?error=" + 
-                                encodeErrorMessage(errorMessage)))
-                            .<Void>build());
+                    try {
+                        return Mono.just(ResponseEntity.status(HttpStatus.FOUND)
+                                .location(new URI("http://localhost:3000/login?error=" + 
+                                    encodeErrorMessage(errorMessage)))
+                                .<Void>build());
+                    } catch (Exception e) {
+                        logger.error("Failed to create error redirect URI", e);
+                        return Mono.error(e);
+                    }
                 });
     }
 
